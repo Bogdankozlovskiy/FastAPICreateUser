@@ -18,7 +18,7 @@ class User(Model):
     last_name = fields.CharField(50)
     gender = fields.CharField(1)
     create_at = fields.CharField(50)
-    status = fields.CharField(1)
+    status = fields.BooleanField(default=False)
     salt = fields.BinaryField()
 
 
@@ -53,7 +53,7 @@ async def register_user(user: UserEntry):
         last_name=user.last_name,
         gender=user.gender,
         create_at=date,
-        status="1",
+        status=True,
         salt=salt
     )
     return await UserList.from_tortoise_orm(user)
