@@ -1,0 +1,16 @@
+fastapi
+hypercorn
+pydantic
+databases
+DateTime
+typing
+uuid
+passlib
+
+tortoise-orm
+asyncpg
+aiosqlite
+aiomysql
+aerich 
+
+
